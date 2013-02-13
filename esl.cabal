@@ -1,0 +1,34 @@
+Name:               esl
+Version:            0.1
+Synopsis:           Elements of Statistical Learning
+Description:        Implementing the algorithms in Elements of Statistical Learning
+License:            OtherLicense
+License-File:       LICENSE
+Author:             Dustin Whitney
+Maintainer:         Dustin Whitney
+Stability:          Experimental
+Homepage:           https://github.com/dwhitney/esl
+Cabal-Version:      >= 1.8
+Build-Type:         Simple
+Category:           Language
+
+Extra-Source-Files: README.md
+                    LICENSE
+
+Data-Files:         data/prostate.csv
+
+Source-Repository head
+    Type:           git
+    Location:       git://github.com/dwhitney/esl.git
+
+Library                 
+    Extensions:         MultiParamTypeClasses
+    Hs-Source-Dirs:     src
+    GHC-Options:        -O2
+    GHC-Prof-Options:   -O2 -auto-all
+    Build-Depends:      base >= 2,
+                        gnuplot,
+                        hmatrix
+    Exposed-Modules:    ESL.LinearRegression
+                        
+
